@@ -23,9 +23,12 @@ void main() {
     });
 
     test('サンプル列（短・長・短・短）を正しく展開する', () {
-      final pattern = buildPattern(
-        const [Pulse.short, Pulse.long, Pulse.short, Pulse.short],
-      );
+      final pattern = buildPattern(const [
+        Pulse.short,
+        Pulse.long,
+        Pulse.short,
+        Pulse.short,
+      ]);
       expect(pattern, <int>[
         0, shortMs, // 基準音
         gapMs, shortMs,

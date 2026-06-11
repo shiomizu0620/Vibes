@@ -11,6 +11,10 @@ import 'pattern_builder.dart';
 /// （短・長・短・短）を返すだけのプレースホルダ。
 class Encoder {
   /// 入力に関わらず固定のサンプル Pulse 列を返す（スタブ）。
-  List<Pulse> encode(String input) =>
-      const [Pulse.short, Pulse.long, Pulse.short, Pulse.short];
+  List<Pulse> encode(String input) => const [
+    Pulse.short,
+    Pulse.long,
+    Pulse.short,
+    Pulse.short,
+  ];
 }
