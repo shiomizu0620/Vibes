@@ -69,6 +69,15 @@ type の種類:
 - 1issue = 1ブランチ = 1PR。複数issueをまとめない
 - PRのタイトルは `[F1] 振動の基盤実装` の形式（`[issue番号] 内容`）
 
+## Supabase セキュリティ方針（厳守）
+- アプリ（Flutter）に埋め込んでよいのは anon key のみ
+- service_role key は絶対にアプリ・リポジトリに入れない（サーバー専用の管理者鍵）
+- キーは `.env` など gitignore対象に置き、コミットしない
+- DB側で RLS（Row Level Security）を必ず有効化する
+  - `urls` テーブル: SELECT は許可（逆引きに必要）
+  - UPDATE / DELETE は禁止
+  - INSERT はデモ要件に応じて制限（未認証で誰でも書ける状態にしない）
+
 ## やらないこと（恒久）
 - 送信側のコード（Vibesリポジトリの担当）
 - PROTOCOL.md の単独変更（3人合意のみ）
