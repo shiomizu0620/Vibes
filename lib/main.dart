@@ -60,8 +60,7 @@ class _SenderPageState extends State<SenderPage> {
   void _playLong() => _vibrator.play(<int>[0, longMs]);
 
   /// サンプル列を再生。encoder → pattern_builder → vibrator の層を通す。
-  void _playSample() =>
-      _vibrator.play(buildPattern(_encoder.encode('demo')));
+  void _playSample() => _vibrator.play(buildPattern(_encoder.encode('demo')));
 
   @override
   Widget build(BuildContext context) {
@@ -87,15 +86,9 @@ class _SenderPageState extends State<SenderPage> {
                     style: TextStyle(color: Colors.redAccent),
                   ),
                 ),
-              ElevatedButton(
-                onPressed: _playShort,
-                child: const Text('短 を1発'),
-              ),
+              ElevatedButton(onPressed: _playShort, child: const Text('短 を1発')),
               const SizedBox(height: 12),
-              ElevatedButton(
-                onPressed: _playLong,
-                child: const Text('長 を1発'),
-              ),
+              ElevatedButton(onPressed: _playLong, child: const Text('長 を1発')),
               const SizedBox(height: 12),
               ElevatedButton(
                 onPressed: _playSample,
