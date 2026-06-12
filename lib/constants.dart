@@ -12,3 +12,18 @@ const int longMs = 450;
 
 /// 音と音の間（無振動）の長さ。
 const int gapMs = 150;
+
+/// プリアンブル1発の振動長（ON）。
+///
+/// 長(450ms)との混同を避けるため、データ音より明確に長くしてある。
+/// 受信側はこの 700ms 級の ON を信号開始の目印にする。
+const int preambleOnMs = 700;
+
+/// プリアンブルの振動と振動の間（無振動・OFF）の長さ。
+const int preambleOffMs = 200;
+
+/// プリアンブルの繰り返し回数。
+///
+/// `[preambleOnMs ON, preambleOffMs OFF]` をこの回数だけ繰り返す
+/// （PROTOCOL.md v1.0: `[700ms ON, 200ms OFF] × 2`）。
+const int preambleRepeat = 2;
