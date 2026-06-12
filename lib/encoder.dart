@@ -12,7 +12,6 @@ List<Pulse> encode(int id) {
   }
   return [
     Pulse.short, // モードマーカー 0 = idモード
-    for (var i = 7; i >= 0; i--)
-      (id >> i) & 1 == 1 ? Pulse.long : Pulse.short,
+    for (var i = 7; i >= 0; i--) (id >> i) & 1 == 1 ? Pulse.long : Pulse.short,
   ];
 }

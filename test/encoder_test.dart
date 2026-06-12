@@ -15,11 +15,11 @@ void main() {
         Pulse.short, // モードマーカー 0 = idモード
         Pulse.short, // bit7: 0
         Pulse.short, // bit6: 0
-        Pulse.long,  // bit5: 1
+        Pulse.long, // bit5: 1
         Pulse.short, // bit4: 0
-        Pulse.long,  // bit3: 1
+        Pulse.long, // bit3: 1
         Pulse.short, // bit2: 0
-        Pulse.long,  // bit1: 1
+        Pulse.long, // bit1: 1
         Pulse.short, // bit0: 0
       ]);
     });
